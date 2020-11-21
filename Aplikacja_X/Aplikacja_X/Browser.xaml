@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Aplikacja_X.Browser"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Aplikacja_X.Returning_resources">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <WebView x:Name="web_view" Grid.Row="0" />
+            <StackLayout Grid.Row="1">
+                <ImageButton
+                    x:Name="undo"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Source="{local:EmbeddedImage Aplikacja_X.Images.undo.png}"
+                    VerticalOptions="Center"
+                    WidthRequest="80" 
+                    Clicked="Undo_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

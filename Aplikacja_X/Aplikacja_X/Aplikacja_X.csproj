@@ -1,0 +1,163 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1.jpg" />
+    <None Remove="Images\1.jpg" />
+    <None Remove="Images\android.jpg" />
+    <None Remove="Images\angular.png" />
+    <None Remove="Images\asp.net_mvc.jpeg" />
+    <None Remove="Images\bikes.jpg" />
+    <None Remove="Images\comics2.jpg" />
+    <None Remove="Images\csharp.png" />
+    <None Remove="Images\css.png" />
+    <None Remove="Images\education.png" />
+    <None Remove="Images\envelope.png" />
+    <None Remove="Images\house.png" />
+    <None Remove="Images\html.jpg" />
+    <None Remove="Images\java.png" />
+    <None Remove="Images\js.png" />
+    <None Remove="Images\kneeling_man.png" />
+    <None Remove="Images\laravel.png" />
+    <None Remove="Images\manga_anime.jpg" />
+    <None Remove="Images\mkm.png" />
+    <None Remove="Images\movies_and_series.png" />
+    <None Remove="Images\multimedia.png" />
+    <None Remove="Images\mysql.png" />
+    <None Remove="Images\new_technology.jpg" />
+    <None Remove="Images\ns.png" />
+    <None Remove="Images\php.png" />
+    <None Remove="Images\picture_homepage.png" />
+    <None Remove="Images\procomp.png" />
+    <None Remove="Images\programming.jpg" />
+    <None Remove="Images\sass.png" />
+    <None Remove="Images\spwl.png" />
+    <None Remove="Images\sql.jpg" />
+    <None Remove="Images\sqlite.png" />
+    <None Remove="Images\technology.png" />
+    <None Remove="Images\ts.png" />
+    <None Remove="Images\undo.png" />
+    <None Remove="Images\vobacom.png" />
+    <None Remove="Images\warhammer_40k.jpg" />
+    <None Remove="Images\witcher.jpg" />
+    <None Remove="Images\xml.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="1.jpg" />
+    <EmbeddedResource Include="Images\1.jpg" />
+    <EmbeddedResource Include="Images\android.jpg" />
+    <EmbeddedResource Include="Images\angular.png" />
+    <EmbeddedResource Include="Images\asp.net_mvc.jpeg" />
+    <EmbeddedResource Include="Images\bikes.jpg" />
+    <EmbeddedResource Include="Images\comics2.jpg" />
+    <EmbeddedResource Include="Images\csharp.png" />
+    <EmbeddedResource Include="Images\css.png" />
+    <EmbeddedResource Include="Images\education.png" />
+    <EmbeddedResource Include="Images\envelope.png" />
+    <EmbeddedResource Include="Images\house.png" />
+    <EmbeddedResource Include="Images\html.jpg" />
+    <EmbeddedResource Include="Images\java.png" />
+    <EmbeddedResource Include="Images\js.png" />
+    <EmbeddedResource Include="Images\kneeling_man.png" />
+    <EmbeddedResource Include="Images\laravel.png" />
+    <EmbeddedResource Include="Images\manga_anime.jpg" />
+    <EmbeddedResource Include="Images\mkm.png" />
+    <EmbeddedResource Include="Images\movies_and_series.png" />
+    <EmbeddedResource Include="Images\multimedia.png" />
+    <EmbeddedResource Include="Images\mysql.png" />
+    <EmbeddedResource Include="Images\new_technology.jpg" />
+    <EmbeddedResource Include="Images\ns.png" />
+    <EmbeddedResource Include="Images\php.png" />
+    <EmbeddedResource Include="Images\picture_homepage.png" />
+    <EmbeddedResource Include="Images\procomp.png" />
+    <EmbeddedResource Include="Images\programming.jpg" />
+    <EmbeddedResource Include="Images\sass.png" />
+    <EmbeddedResource Include="Images\spwl.png" />
+    <EmbeddedResource Include="Images\sql.jpg" />
+    <EmbeddedResource Include="Images\sqlite.png" />
+    <EmbeddedResource Include="Images\technology.png" />
+    <EmbeddedResource Include="Images\ts.png" />
+    <EmbeddedResource Include="Images\undo.png" />
+    <EmbeddedResource Include="Images\vobacom.png" />
+    <EmbeddedResource Include="Images\warhammer_40k.jpg" />
+    <EmbeddedResource Include="Images\witcher.jpg" />
+    <EmbeddedResource Include="Images\xml.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
+    <PackageReference Include="MySqlConnector" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.1.0.714" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="1MenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CV_2.xaml.cs">
+      <DependentUpon>CV_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MasterDetail_CV_PageMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="1Detail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Browser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="CV_1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Education.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Experience.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Hobbies.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MasterDetailPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MasterDetailPage1Master.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MasterDetail_CV_Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MasterDetail_CV_PageDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MasterDetail_CV_PageMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Skills.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

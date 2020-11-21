@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Aplikacja_X.Skills"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label
+                        Margin="0,10,0,0"
+                        FontAttributes="Bold"
+                        FontSize="Large"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Professional skills" />
+                    <ListView
+                        x:Name="professional_skills"
+                        GroupDisplayBinding="{Binding Title}"
+                        GroupShortNameBinding="{Binding Shortname}"
+                        IsGroupingEnabled="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell
+                                    Detail="{Binding Detail}"
+                                    ImageSource="{Binding ImageSource}"
+                                    Tapped="MenuItem_Clicked"
+                                    CommandParameter="{Binding .}"
+                                    Text="{Binding Text}" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

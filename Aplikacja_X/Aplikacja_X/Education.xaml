@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Aplikacja_X.Education"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Aplikacja_X.Returning_resources"
+    xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="#F3F5F9"
+            ColumnSpacing="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="35*" />
+                <ColumnDefinition Width="65*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Column="0"
+                Margin="0,10,20,0"
+                Aspect="Fill"
+                HeightRequest="60"
+                HorizontalOptions="End"
+                Source="{local:EmbeddedImage ResourceId=Aplikacja_X.Images.education.png,
+                                             Resource_name=0}"
+                VerticalOptions="Center"
+                WidthRequest="60" />
+            <StackLayout
+                Grid.Column="1"
+                Margin="0,0,0,0"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center">
+                <Label
+                    FontSize="40"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span FontSize="40" Text="Education" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                <ScrollView>
+                    <StackLayout Padding="10,10,10,10">
+                        <ListView
+                            x:Name="education"
+                            RowHeight="390"
+                            SeparatorVisibility="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <pv:PancakeView
+                                                Margin="0,10,0,0"
+                                                CornerRadius="30,30,30,30"
+                                                HasShadow="True"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="StartAndExpand">
+                                                <Grid Padding="20,10,20,10" BackgroundColor="#03A9F4">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="50*" />
+                                                        <ColumnDefinition Width="50*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="40*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="50*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                        <RowDefinition Height="30*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Label
+                                                        Grid.Row="0"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Italic"
+                                                        FontSize="Micro"
+                                                        Text="Academic title" />
+                                                    <Label
+                                                        Grid.Row="1"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Bold"
+                                                        FontSize="Large"
+                                                        Text="{Binding Academic_title}"
+                                                        TextColor="Black" />
+                                                    <Label
+                                                        Grid.Row="2"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Italic"
+                                                        FontSize="Micro"
+                                                        Text="School" />
+                                                    <Label
+                                                        Grid.Row="3"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Bold"
+                                                        Text="{Binding School}" />
+                                                    <Label
+                                                        Grid.Row="4"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Italic"
+                                                        FontSize="Micro"
+                                                        Text="Field" />
+                                                    <Label
+                                                        Grid.Row="5"
+                                                        Grid.ColumnSpan="2"
+                                                        Text="{Binding Direction}" />
+                                                    <Label
+                                                        Grid.Row="6"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Italic"
+                                                        FontSize="Micro"
+                                                        Text="Specialization" />
+                                                    <Label
+                                                        Grid.Row="7"
+                                                        Grid.ColumnSpan="2"
+                                                        Text="{Binding Specialization}" />
+                                                    <Label
+                                                        Grid.Row="8"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Italic"
+                                                        FontSize="Micro"
+                                                        Text="School website" />
+                                                    <Label
+                                                        Grid.Row="9"
+                                                        Grid.ColumnSpan="2"
+                                                        Text="{Binding School_website}" />
+                                                    <Label
+                                                        Grid.Row="10"
+                                                        Grid.ColumnSpan="2"
+                                                        FontAttributes="Italic"
+                                                        FontSize="Micro"
+                                                        Text="In years" />
+                                                    <Label
+                                                        Grid.Row="11"
+                                                        Grid.Column="0"
+                                                        Grid.ColumnSpan="2">
+                                                        <Label.FormattedText>
+                                                            <FormattedString>
+                                                                <Span Text="{Binding Start_year}" />
+                                                                <Span Text=" - " />
+                                                                <Span Text="{Binding End_year}" />
+                                                            </FormattedString>
+                                                        </Label.FormattedText>
+                                                    </Label>
+                                                </Grid>
+                                            </pv:PancakeView>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
