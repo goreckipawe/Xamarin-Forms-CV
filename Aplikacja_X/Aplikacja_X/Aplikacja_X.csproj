@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="1.jpg" />
     <None Remove="Images\1.jpg" />
     <None Remove="Images\android.jpg" />
     <None Remove="Images\angular.png" />
@@ -52,7 +51,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="1.jpg" />
     <EmbeddedResource Include="Images\1.jpg" />
     <EmbeddedResource Include="Images\android.jpg" />
     <EmbeddedResource Include="Images\angular.png" />
@@ -105,9 +103,6 @@
     <Compile Update="1MenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="CV_2.xaml.cs">
-      <DependentUpon>CV_2.xaml</DependentUpon>
-    </Compile>
     <Compile Update="MasterDetail_CV_PageMenuItem.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -123,9 +118,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Browser.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="CV_1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Education.xaml">
